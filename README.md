@@ -4,7 +4,7 @@ These tasks are extented tasks from the school subject: Foundations of Programmi
 # Themes
 1. if statements, loops, variables, functions
 2. functions, data types, debugging
-3. lists, tuples, randomness
+3. lists, tuples, random
 4. strings, input/output (print)
 5. data types, assertions, correctness
 6. Abstract Data Types, lists, dictionaries, sets, etc.
