@@ -78,7 +78,7 @@ def main() -> None:
                         datetime(2020, 8, 29, 10, 0))], day) == \
         [(datetime(2020, 8, 27, 8, 0), datetime(2020, 8, 27, 15, 0))]
 
-    cal1 = messcase(datetime(2020, 11, 1), datetime(2020, 11, 7), timedelta(hours=2, minutes=30))
+    cal1 = testcase(datetime(2020, 11, 1), datetime(2020, 11, 7), timedelta(hours=2, minutes=30))
 
     copy = cal1[:]
 
@@ -97,7 +97,7 @@ def main() -> None:
     assert free_slots(copy, date(2020, 11, 1)) == []
     assert copy == cal1
 
-    cal2 = messcase(datetime(2020, 11, 1, 1), datetime(2020, 11, 7), timedelta(hours=2))
+    cal2 = testcase(datetime(2020, 11, 1, 1), datetime(2020, 11, 7), timedelta(hours=2))
 
     assert free_slots(cal2, date(2020, 11, 4)) == \
         [(datetime(2020, 11, 4, 8, 0), datetime(2020, 11, 4, 9, 0)),
@@ -109,7 +109,7 @@ def day_slot(day: date, start: time, end: time) -> Slot:
     return (datetime.combine(day, start), datetime.combine(day, end))
 
 
-def messcase(start: datetime, end: datetime, delta: timedelta) -> Calendar:
+def testcase(start: datetime, end: datetime, delta: timedelta) -> Calendar:
     calendar = []
     while start < end:
         calendar.append((start, start + delta))
